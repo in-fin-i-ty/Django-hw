@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% load my_tags %}
+<div class="row text-center">
+    {% for object in object_list %}
+        <div class="col">
+            <img class="card-img-top" src="{{ object.preview|mymedia }}">
+            <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+                        <h1>Цена: {{ object.price }} Р.</h1>
+                        <h3 class="truncate">Описание: {{ object.description }}</h3>
+                        <h3>Категория: {{ object.category }}</h3>
+                        <h3>Дата появления: {{ object.date_create|mydate }}</h3>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+
