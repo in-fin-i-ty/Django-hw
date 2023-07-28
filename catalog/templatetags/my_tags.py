@@ -4,11 +4,11 @@ register = template.Library()
 
 
 @register.filter()
-def mymedia(val):
+def mymedia(val, no_val='/static/png/NO.png'):
     if val:
         return f"/media/{val}"
-    else:
-        return 'static/png/NO.png'
+
+    return no_val
 
 
 @register.filter()
