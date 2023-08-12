@@ -1,9 +1,9 @@
-{% extends 'main/base.html' %}
+{% extends 'catalog/base.html' %}
 {% block content %}
 {% load my_tags %}
 <div class="row text-center">
-    {% for object in object_list %}
-        <div class="col">
+        <div class="col-12">
+        <div class="col-6">
             <img class="card-img-top" src="{{ object.preview|mymedia }}">
             <div class="card mb-4 box-shadow">
                 <div class="card-body">
@@ -17,7 +17,8 @@
                 </div>
             </div>
         </div>
-    {% endfor %}
+        </div>
+        </div>
     </div>
 {% endblock %}
 
