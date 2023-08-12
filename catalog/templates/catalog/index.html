@@ -1,4 +1,4 @@
-{% extends 'main/base.html' %}
+{% extends 'catalog/base.html' %}
 {% block content %}
 {% load my_tags %}
 <div class="row text-center">
@@ -10,7 +10,7 @@
                     <h4 class="my-0 font-weight-normal" >{{ object.name|title }}</h4>
                 </div>
                 <div class="card-body">
-                    <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:product' object.pk %}">Подробнее</a>
+                    <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:detail_product' object.pk %}">Подробнее</a>
                 </div>
             </div>
         </div>
